@@ -5,7 +5,7 @@ const targetPath = './src/environments/environment.ts';
 
 const colors = require('colors');
 
-require('dotenv').load();
+require('dotenv').config();
 
 const envConfigFile = `export const environment = {
     apiKey: '${process.env.TRANSLATE_KEY}',
@@ -17,7 +17,7 @@ const envConfigFile = `export const environment = {
 
 console.log(colors.magenta('The file `environment.ts` will be written with the following content: \n'));
 console.log(colors.grey(envConfigFile));
-writeFile(targetPath, envConfigFile, function (err) {
+writeFile.writeFile(targetPath, envConfigFile, function (err) {
    if (err) {
        throw console.error(err);
    } else {
