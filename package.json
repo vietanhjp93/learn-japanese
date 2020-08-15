@@ -12,8 +12,6 @@
   },
   "private": true,
   "dependencies": {
-    "colors": "^1.1.2",
-    "dotenv": "^5.0.0",
     "@angular/animations": "~9.1.11",
     "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.1.11",
@@ -30,6 +28,8 @@
     "aws-sdk": "^2.731.0",
     "axios": "^0.19.2",
     "child_process": "^1.0.2",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
     "fast-crc32c": "^2.0.0",
     "google-translate": "^3.0.0",
     "google-translate-api": "^2.3.0",
