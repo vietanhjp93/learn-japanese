@@ -5,10 +5,11 @@
     "ng": "ng",
     "config": "ts-node set-env.ts",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run config && ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "npm run build"
   },
   "private": true,
   "dependencies": {
