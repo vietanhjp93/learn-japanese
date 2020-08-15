@@ -6,6 +6,7 @@ export const environment = {
   apiKey: "xxx",
   s3AccessKeyId : "xxx",
   s3SecretAccessKey : "xxx",
+  production: false,
   };
 
 /*
