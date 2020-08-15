@@ -4,7 +4,6 @@ import { BehaviorSubject, combineLatest } from 'rxjs';
 import { onsNotification } from "ngx-onsenui";
 import { TranslationServiceClient } from "@google-cloud/translate";
 import { OAuth2Client } from 'google-auth-library';
-import { environment } from 'src/environments/environment';
 import { google } from "googleapis";
 import { GoogleService, GoogleObj } from '../../services/google.services';
 

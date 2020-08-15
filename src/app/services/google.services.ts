@@ -12,7 +12,9 @@ export class GoogleService {
   constructor(private _http: HttpClient) {}
 
   translate(obj: GoogleObj) {
-    return this._http.post(this.url + process.env.TRANSLATE_KEY ? process.env.TRANSLATE_KEY : environment.apiKey, obj);
+    return this._http.post(this.url + process.env.TRANSLATE_KEY
+       ? process.env.TRANSLATE_KEY : environment.apiKey
+       , obj);
   }
   download(url) {
     return this._http.get(url, {
