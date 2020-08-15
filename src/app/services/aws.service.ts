@@ -12,8 +12,8 @@ export class AwsService {
 
   private bucket = new s3(
     {
-      accessKeyId: environment.s3AccessKeyId,
-      secretAccessKey: environment.s3SecretAccessKey,
+      accessKeyId: process.env.ACCESS_KEY_ID || environment.s3AccessKeyId,
+      secretAccessKey: process.env.SECRET_ACCESS_KEY || environment.s3SecretAccessKey,
       region: 'ap-northeast-1'
     }
   );
