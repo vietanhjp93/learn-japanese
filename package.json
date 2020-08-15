@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "config": "ts-node set-env.ts",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
@@ -11,6 +12,8 @@
   },
   "private": true,
   "dependencies": {
+    "colors": "^1.1.2",
+    "dotenv": "^5.0.0",
     "@angular/animations": "~9.1.11",
     "@angular/cdk": "^9.2.4",
     "@angular/common": "~9.1.11",
