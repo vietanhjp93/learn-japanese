@@ -1,0 +1,93 @@
+
+containerVideo {
+    padding-left: inherit;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle; // delete while space 
+    position: relative;
+}
+controls {
+    margin-top: 0;
+    text-align: center;
+}
+.buttonCtrl {
+    position: relative;
+    width: 20%;
+    height: 2rem;
+    line-height: 2rem;
+    border: none;
+    background-color: greenyellow;
+    &:active {
+        background-color: green;
+        border: none;
+    }
+    &:default {
+        border: none;
+    }
+
+}
+#currentCueId {
+    color: red;
+    user-select: text;
+}
+.heroes{
+    margin: 0rem 10em 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+    max-width: 15em;
+    background-color: rgb(240, 57, 57);       
+}
+.cueCSS {
+    visibility: visible;
+    &.active {
+        background-color: rgb(240, 57, 57);
+        visibility: visible;
+    }
+}
+.heroes li {
+    cursor: pointer;
+    position: relative;
+    word-wrap: break-word;
+    left: 0;
+    background-color: #eee;
+    margin: 0.5em;
+    padding: .6em 0em .3em 0.6em;
+    height: auto;
+    border-radius: 40px;
+}
+.heroes li:hover {
+    color: #607;
+    background-color: rgb(46, 228, 61);
+    left: .9em;
+}
+
+.heroes li.sac {
+    background-color: #cfd8dc;
+    color: white;
+}
+.heroes li.sac:hover {
+    background-color: #BBD8DC;
+    color: black;
+}
+
+.heroes .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color:#405061;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+}

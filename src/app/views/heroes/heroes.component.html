@@ -1,0 +1,33 @@
+<div class="containerVideo">
+  <video class="video" autoplay 
+  playsinline (click)="toggleVideo()" 
+  #video preload="metadata" 
+  (loadedmetadata)="vidProps($event)" 
+  crossorigin="use-credentials"
+  src="https://yvpub-bucket001-west.west.edge.storage-yahoo.jp/packages/20200814/middle/d12768b67406d7382695d7fa1520f0fe.mp4?AWSAccessKeyId=AKI3S5EJBTP9EYDDPBA&Expires=1597401380&Signature=3AnRW9WpvldHe7rUYAqpmjnlbME%3D"
+  >
+    <track label="Japan" kind="subtitles" srclang="ja" src="./assets/captions.vtt">
+    <track label="VietNam" kind="subtitles" srclang="vi" src="./assets/captions_vn.vtt">
+  </video>
+<div id="video-controls" class="controls" data-state="hidden">
+  <button class="buttonCtrl" id="prevCue" type="button" (click)="prevCue()" data-state="prev">◀◀</button>
+  <button class="buttonCtrl" id="playpause" type="button" (click)="playPause()" data-state="play">{{isPause ? '▶' : '||' }}</button>
+  <button class="buttonCtrl" id="nextCue" type="button" (click)="nextCue()" data-state="next">▶▶</button>
+  <button class="buttonCtrl" id="replay" type="button" (click)="replay()" data-state="replay">↺</button>
+  <button class="buttonCtrl" id="replay" type="button" (click)="replay()" data-state="replay">💛</button>
+</div>
+<div>
+  <span id="currentCueId" class="badge">{{currentCue}}</span>
+</div>
+
+<div>
+  <span id="targetCueId" class="badge">{{targetCue}}</span>
+</div>
+<div>
+  <label>Hero name:
+    <input #heroName />
+  </label>
+  <button>
+    add
+  </button>
+</div>

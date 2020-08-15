@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div id= "mainView" class="mainView">
+    <li *ngFor="let news of newsList ; let i = index">
+        <div class="container" (click)="tappedNews(news)">
+            <div class="newCon">
+                <div class="imageWrap">
+                    <picture *ngIf="news.image">
+                        <img class="image" [src]="news.image" alt>
+                    </picture>
+                    <picture *ngIf="!news.image">
+                        <img class="image" src="./assets/test1.jpg" alt>
+                    </picture>
+                </div>
+                <div class="bodyContent">
+                    <div class="titleContent">
+                        <p class="title" [innerHTML]="news.shortTitle | safe: 'html'"></p>
+                    </div>
+                    <div class="content">
+                        <span class="status">状態：{{news.readState ? '既読' : '未読'}}</span>
+                        <span class="status">{{news.timeReading}}s</span>
+                        <span class="level">{{news.countWord}}字</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</div>
+<app-footer></app-footer>

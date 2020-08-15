@@ -1,0 +1,47 @@
+.mainFooter{
+    display: flex;
+    position: sticky;
+    width: 100%;
+    justify-content: space-between;
+    height: 30px;
+    background-color: #18191a;
+    box-sizing: border-box;
+    .leftItems {
+        overflow-x: scroll;
+        width: calc(100% - 60px);
+        justify-content: flex-start;
+        display: flex;
+        // margin-left: 0px;
+        .image{
+            height: 30px;
+            padding: 0 10px;
+            display: block;
+            object-fit: cover;
+        }
+    }
+    .leftItems::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+    .rightItems {
+        width: 60px;
+        justify-content: space-around;
+        display: flex;
+        .image{
+            width: 100%;
+            padding: 5px 5px;
+            display: block;
+            object-fit: cover;
+        }
+    }
+    .title{
+        margin: 0px;
+        font-size: 11px;
+        text-align: center;
+        color: rgb(228, 230, 235);
+        margin-bottom: 0px;
+    }
+    .button {
+        justify-content: space-around;
+        
+    }
+}

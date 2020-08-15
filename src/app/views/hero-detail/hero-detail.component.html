@@ -1,0 +1,46 @@
+<div id="mainFooter" class="mainFooter">
+  <div class="leftItems">
+      <div class="buttonFooter" (click)="onClickBack()">
+          <img class="image" src="./assets/back.svg" alt>
+      </div>
+  </div>
+  <div class="rightItems">
+    <div class="buttonFooter" (click)="likeContentUpdate()">
+        <img class="image" [src]="news.likeState ? './assets/heart_on.svg' : './assets/heart_off.svg'" alt>
+    </div>
+    <div class="buttonFooter" (click)="changeDisplayTranslate()">
+        <img class="image" [src]="translatedContentDisplayFlag ? './assets/translation (3).svg' : './assets/translation (2).svg'" alt>
+    </div>
+    <div class="buttonFooter" (click)="setDisplaySubtitles()">
+        <img class="image" [src]="furiganaDisplayFlag ? './assets/closed-caption (1).svg' : './assets/closed-caption (2).svg'" alt>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="news">
+  <div class="imageWrap" *ngIf="news.image">
+    <picture>
+        <img class="image" [src]="news.image" alt>
+    </picture>
+    <picture *ngIf="!news.image">
+        <img class="image" src="./assets/test1.jpg" alt>
+    </picture>
+  </div>
+  <div id="content">
+
+    <p class="titleOfNews" [innerHTML]="news.newTitle | safe: 'html'"></p>
+
+    <span id="newContentViId" class="titleOfNews" *ngIf="translatedContentDisplayFlag"  
+      [innerHTML]="news.newTitleVi | safe: 'html'">
+    </span>
+
+    <li *ngFor="let content of news.newContent ; let i = index">
+
+      <p class="newsContent" [innerHTML]="content | safe: 'html'"></p>
+
+      <span id="newContentViId" class="newsContent" *ngIf="translatedContentDisplayFlag" 
+      [innerHTML]="news.newContentVi[i] | safe: 'html'"></span>
+
+    </li>
+  </div>
+</div>

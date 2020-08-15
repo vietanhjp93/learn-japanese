@@ -1,0 +1,25 @@
+.mainFooter{
+    display: flex;
+    position: sticky;
+    width: 100%;
+    justify-content: space-around;
+    height: 70px;
+    background-color: #18191a;
+    .image{
+        height: 30px;
+        display: block;
+        object-fit: cover;
+    }
+    .title{
+        margin: 0px;
+        font-size: 11px;
+        text-align: center;
+        color: rgb(228, 230, 235);
+        margin-bottom: 0px;
+    }
+    .button {
+        justify-content: space-around;
+        
+    }
+
+}
