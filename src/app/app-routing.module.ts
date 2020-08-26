@@ -3,10 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { HeroesComponent } from "./views/heroes/heroes.component";
 import { DashboardComponent } from "./views/dashboard/dashboard.component";
 import { HeroDetailComponent } from "./views/hero-detail/hero-detail.component";
+import { MessagesComponent } from './views/messages/messages.component';
+import { ForgotComponent } from './views/forgot/forgot.component';
 
 const routes: Routes = [
   {
-    path: '', component: DashboardComponent
+    path: '', component: DashboardComponent, data: { animation: 'isLeft'}
   },
   {
     path: 'heroes', component: HeroesComponent
@@ -16,6 +18,12 @@ const routes: Routes = [
   },
   {
     path: 'detail', component: HeroDetailComponent
+  },
+  {
+    path: 'forgot', component: ForgotComponent, data: { animation: 'isRight'}
+  },
+  {
+    path: 'rank', component: MessagesComponent, data: { animation: 'isLeft'}
   }
 ];
 

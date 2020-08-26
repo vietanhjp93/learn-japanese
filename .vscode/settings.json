@@ -1,9 +1,12 @@
 {
     "cSpell.words": [
         "Furigana",
+        "awsconfig",
+        "hkemjm",
         "onsenui",
         "webp",
         "webstorage",
         "youtube"
-    ]
+    ],
+    "editor.detectIndentation": false
 }

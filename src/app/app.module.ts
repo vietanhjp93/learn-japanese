@@ -17,6 +17,14 @@ import { MainPipeModule } from "./common/main-pipe/main-pipe.module";
 import { FooterComponent } from './views/footer/footer.component';
 import { HeaderComponent } from './views/header/header.component';
 import { StorageServiceModule } from "ngx-webstorage-service";
+import { ReactiveFormsModule } from "@angular/forms";
+import { MatDialogModule } from "@angular/material/dialog";
+import { ConfirmDialogComponent } from './views/common-component/confirm-dialog/confirm-dialog.component';
+import { InputDialogComponent } from './views/common-component/input-dialog/input-dialog.component';
+import { SelectDialogComponent } from './views/common-component/select-dialog/select-dialog.component';
+import { PickerDialogComponent } from './views/common-component/picker-dialog/picker-dialog.component';
+import { NoButtonDialogComponent } from './views/common-component/no-button-dialog/no-button-dialog.component';
+import { ForgotComponent } from './views/forgot/forgot.component';
 
 // var pStart = {x: 0, y:0};
 // var pStop = {x:0, y:0};
@@ -73,7 +81,13 @@ import { StorageServiceModule } from "ngx-webstorage-service";
     MessagesComponent,
     DashboardComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    InputDialogComponent,
+    SelectDialogComponent,
+    PickerDialogComponent,
+    NoButtonDialogComponent,
+    ConfirmDialogComponent,
+    ForgotComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +97,12 @@ import { StorageServiceModule } from "ngx-webstorage-service";
     BrowserAnimationsModule,
     OnsenModule,
     MainPipeModule,
-    StorageServiceModule
+    StorageServiceModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+  ],
+  entryComponents:[
+    ConfirmDialogComponent
   ],
   providers: [Http],
   schemas: [

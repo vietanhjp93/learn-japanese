@@ -27,6 +27,7 @@
     "@google-cloud/storage": "^5.1.2",
     "@google-cloud/translate": "^6.0.0",
     "@types/subtitle": "^2.0.2",
+    "amazon-cognito-identity-js": "^4.3.3",
     "aws-sdk": "^2.731.0",
     "axios": "^0.19.2",
     "child_process": "^1.0.2",
