@@ -23,13 +23,13 @@
                 </div>
                 
                 <div id="link-container">
-                    <div class="forgot-pass" [routerLink]="'/forgot'">
+                    <div class="forgot-pass" (click)="onClickForgot()">
                         <a class="forgotPass">Forgot account?</a>
                     </div>
                     <div class="or-span">
                         <span class="forgotPass">or</span>
                     </div>
-                    <div class="register">
+                    <div class="register" (click)="onClickSignIn()">
                         <a class="sign">Sign Up</a>
                     </div>
                 </div>

@@ -1,0 +1,42 @@
+<div class="login-container">
+    <div class="login-box">
+        <div class="title-box">
+            <span>
+                <div>{{ title.top }}</div>
+                <div>{{ title.bottom }}</div>
+            </span>
+        </div>
+        <form id="login-form" [formGroup]="formData">
+            <div id="loginForm">
+                <div id="email-pass-container">
+                    <input type="email" class="input-text" placeholder="Email or phone number" autofocus="1"
+                    formControlName="email">
+                </div>
+                
+                <div id="email-pass-container">
+                    <input type="tel" class="input-text" placeholder="Confirm code" autofocus="1"
+                    formControlName="code">
+                </div>
+                <div id="email-pass-container">
+                    <input type="password" class="input-text" placeholder="Password" autofocus="1"
+                    formControlName="pass">
+                </div>
+                <div id="email-pass-container">
+                    <input type="password" class="input-text" placeholder="Password" autofocus="1"
+                    formControlName="confirmPass">
+                </div>
+                
+                <div id="login-button-container">
+                    <button value="1" id="sendButton" name="login" type="submit" (click)="onClickSubmitEmail(formData.value)">{{ titleSendConfirm.button }}</button>
+                </div>
+
+                <div id="login-button-container">
+                    <button value="1" id="confirmButton" name="login" type="submit" (click)="onClickSubmitCode(formData.value)">{{ titleForgot.button }}</button>
+                </div>
+                
+                
+            </div>
+        </form>
+    </div>
+</div>
+<app-footer></app-footer>

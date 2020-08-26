@@ -6,34 +6,37 @@
                 <div>{{ title.bottom }}</div>
             </span>
         </div>
-        <form id="login-form" [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)">
+        <form id="login-form" [formGroup]="formData">
             <div id="loginForm">
-                <div id="email-pass-container">
-                    <input type="email" class="input-text" placeholder="Email or phone number" autofocus="1"
-                    autocomplete="username" formControlName="email">
+                <div id="email-pass-container" *ngIf="!isMailOk">
+                    <input type="email" class="inputValid" id="mail" placeholder="Email or phone number" autofocus="1"
+                    formControlName="email">
+                    <p id="letter" class="invalid" *ngIf="isMailErr">Input invalid</p>
                 </div>
                 
-                <div id="email-pass-container">
-                    <input type="password" class="input-text" placeholder="Password" autofocus="1"
-                    autocomplete="current-password" formControlName="pass">
+                <div id="email-pass-container" *ngIf="isMailOk && !isConfirmSuccess">
+                    <input type="tel" class="inputValid" id="code" placeholder="Confirm code" autofocus="1"
+                    formControlName="code">
+                    <p id="letter" class="invalid" *ngIf="isCodeErr">The confirm code not match</p>
+                </div>
+                <div id="email-pass-container" class="invalid" *ngIf="isConfirmSuccess">
+                    <input type="password" class="inputValid" id="pass" placeholder="Password" autofocus="1"
+                    formControlName="pass">
+                    <p id="letter" class="invalid" *ngIf="isPassErr">Password must have length 6~256</p>
+                </div>
+                <div id="email-pass-container" class="invalid" *ngIf="isConfirmSuccess">
+                    <input type="password" class="inputValid" id="confirmPass" placeholder="Password" autofocus="1"
+                    formControlName="confirmPass">
+                    <p id="letter" class="invalid" *ngIf="isConfirmErr">Confirm password not match</p>
                 </div>
                 
-                <div id="login-button-container" *ngIf="!isDisplaySignUp">
-                    <button value="1" id="loginButton" name="login" type="submit">{{ title.button }}</button>
+                <div id="login-button-container" *ngIf="!isConfirmSuccess">
+                    <button value="1" id="sendButton" name="login" type="submit" (click)="onClickSubmitEmail(formData.value)">{{ title.button }}</button>
                 </div>
-                
-                <div id="link-container">
-                    <div class="forgot-pass" [routerLink]="'/forgot'">
-                        <a class="forgotPass">Forgot account?</a>
-                    </div>
-                    <div class="or-span">
-                        <span class="forgotPass">or</span>
-                    </div>
-                    <div class="register">
-                        <a class="sign">Sign Up</a>
-                    </div>
+
+                <div id="login-button-container" *ngIf="isConfirmSuccess">
+                    <button value="1" id="confirmButton" name="login" type="submit" (click)="onClickSubmitCode(formData.value)">{{ title.button }}</button>
                 </div>
-                
             </div>
         </form>
     </div>

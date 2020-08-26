@@ -25,6 +25,7 @@ import { SelectDialogComponent } from './views/common-component/select-dialog/se
 import { PickerDialogComponent } from './views/common-component/picker-dialog/picker-dialog.component';
 import { NoButtonDialogComponent } from './views/common-component/no-button-dialog/no-button-dialog.component';
 import { ForgotComponent } from './views/forgot/forgot.component';
+import { SigninComponent } from './views/signin/signin.component';
 
 // var pStart = {x: 0, y:0};
 // var pStop = {x:0, y:0};
@@ -87,7 +88,8 @@ import { ForgotComponent } from './views/forgot/forgot.component';
     PickerDialogComponent,
     NoButtonDialogComponent,
     ConfirmDialogComponent,
-    ForgotComponent
+    ForgotComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

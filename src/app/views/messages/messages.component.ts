@@ -53,11 +53,12 @@ export class MessagesComponent implements OnInit {
     toggle() {
     }
     onClickForgot() {
-        this.title = this.titleForgot;
-        this.isDisplaySignUp = false;
-        this.isOpen = 'close';
         this.router.navigate(['/forgot']);
 
+    }
+
+    onClickSignIn() {
+        this.router.navigate(['/signIn']);
     }
 
     onClickSubmit(data) {

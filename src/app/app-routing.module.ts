@@ -5,6 +5,7 @@ import { DashboardComponent } from "./views/dashboard/dashboard.component";
 import { HeroDetailComponent } from "./views/hero-detail/hero-detail.component";
 import { MessagesComponent } from './views/messages/messages.component';
 import { ForgotComponent } from './views/forgot/forgot.component';
+import { SigninComponent } from './views/signin/signin.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,10 @@ const routes: Routes = [
   },
   {
     path: 'rank', component: MessagesComponent, data: { animation: 'isLeft'}
-  }
+  },
+  {
+    path: 'signIn', component: SigninComponent, data: { animation: 'isLeft'}
+  },
 ];
 
 @NgModule({

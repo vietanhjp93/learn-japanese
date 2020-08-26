@@ -12,6 +12,8 @@ const envConfigFile = `export const environment = {
     s3AccessKeyId : '${process.env.ACCESS_KEY_ID}',
     s3SecretAccessKey : '${process.env.SECRET_ACCESS_KEY}',
     production: true,
+    UserPoolId : '${process.env.USER_POOL_ID}',
+    ClientId : '${process.env.CLIENT_ID}',
 };
 `;
 
